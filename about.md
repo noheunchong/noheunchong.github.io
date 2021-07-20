@@ -11,6 +11,10 @@ items:
     image:
       src: /assets/img/about/dw.png
       alt: dw
+  - title: Tomcat
+    image:
+      src: /assets/img/about/tomcat.png
+      alt: tomcat
 ---
 
 <br />
