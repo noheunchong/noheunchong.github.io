@@ -24,6 +24,4 @@ slug: /about
     <div class="skills php">PHP</div>
   </div>
           </div>
-        </div>
-      </div>
-    </div>
+       
