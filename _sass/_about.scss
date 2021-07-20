@@ -8,24 +8,65 @@
   width: 350px;
   height: 400px;
   }
-.container {
-  box-sizing: border-box;
-   width: 80%;
-   height: 80%;
-   background-color: #ddd;
-  }
+
 .skills {
-  text-align: right;
-  text-size: 2px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  color: white;
-        .java {width: 93%; background-color: #808080;}
-        .mysql {width: 90%; background-color: #808080;}
-        .html {width: 88%; background-color: #808080;}
-        .php {width: 80%; background-color: #808080;}
-          
-  }
+   padding:15px;
+}
+
+.skills .skill {
+   margin-bottom: 30px;
+}
+
+.skills .skill .skill-title {
+   color: #808080;
+   margin-bottom: 10px;
+   font-weight: 400;
+   font-size: 14px;
+}
+
+.skills .skill .skill-bar {
+   width: 0;
+   height: 6px;
+   background: #f0f0f0;
+   transition: 1s cubic-bezier(1, 0, .5, 1);
+   -webkit-transition: 1s cubic-bezier(1, 0, .5, 1);
+   -ms-transition: 1s cubic-bezier(1, 0, .5, 1);
+}
+
+.skills.active .skill .skill-bar {
+   width: 100%;
+}
+
+.skills .skill .skill-bar span {
+   float: left;
+   width: 0%;
+   background: #1D91F2;
+   height: 6px;
+   position: relative;
+   transition: 1s cubic-bezier(1, 0, .5, 1);
+   -webkit-transition: 1s cubic-bezier(1, 0, .5, 1);
+   -ms-transition: 1s cubic-bezier(1, 0, .5, 1);
+}
+
+.skills .skill .skill-bar span b {
+   float: left;
+   width: 100%;
+   position: relative;
+   text-align: right;
+   opacity: 0;
+   font-size: 14px;
+   color: #1D91F2;
+   font-weight: 400;
+   top: -13px;
+}
+
+.container{
+  width: 100%;
+  max-width: 600px;
+  padding:0 15px;
+  margin:0 auto;
+}
+
 .about-tool {
   float: right;
   padding-left: 20px;
