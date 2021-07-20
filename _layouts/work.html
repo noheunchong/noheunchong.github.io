@@ -27,6 +27,20 @@
               {{ item.description }}
             </span>
             {% endif %}
+            {% if item.title == 'My Interest 2' %}
+            <a href="http://github.com/noheunchong">
+            <img
+              src="/assets/img/work/sand.png"
+              alt="sand"
+              class="work-bubble"
+            />
+            </a>
+            <span class="work-text">
+              <strong>{{ item.title }}</strong>
+              &mdash;
+              {{ item.description }}
+            </span>
+            {% endif %}
           </div>
           {% endfor %}
         </div>
