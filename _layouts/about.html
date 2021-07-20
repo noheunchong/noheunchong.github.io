@@ -12,17 +12,8 @@
           {{ content }}
 
           {% for item in page.items %}
-          <div class="about-item">
-            <img
-              src="{{ item.image.src | absolute_url }}"
-              alt="{{ item.image.alt }}"
-              class="about-bubble"
-            />
-            <span class="about-text">
-              <strong>{{ item.title }}</strong>
-              &mdash;
-              {{ item.description }}
-            </span>
+          <div class="about-skill">
+           {% include skill.html %}
           </div>
           {% endfor %}
         </div>
