@@ -1,6 +1,33 @@
 <!DOCTYPE html>
 <html>
   {% include head.html %}
+  <style>
+* {box-sizing: border-box}
+
+.h2 {
+  padding-top:10px;
+  }
+  
+.container {
+  width: 80%;
+  height: 80%;
+  background-color: #ddd;
+}
+
+.skills {
+  text-align: right;
+  text-size: 2px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: white;
+}
+  
+.java {width: 93%; background-color: #808080;}
+.mysql {width: 90%; background-color: #808080;}
+.html {width: 88%; background-color: #808080;}
+.php {width: 80%; background-color: #808080;}
+
+</style>
 
   <body>
     {% include header.html %}
@@ -11,7 +38,23 @@
           <h1 class="page-heading">{{ page.title }}</h1>
           {% for item in page.items %}
           <div class="about-skill">
-           {% include skill.html %}
+           <h2>My Skills</h2>
+ 
+  <div class="container">
+    <div class="skills java">JAVA</div>
+  </div>
+  </br>
+  <div class="container">
+    <div class="skills mysql">MySql</div>
+  </div>
+</br>
+  <div class="container">
+    <div class="skills html">HTML</div>
+  </div>
+</br>
+  <div class="container">
+    <div class="skills php">PHP</div>
+  </div>
           </div>
           {% endfor %}
         </div>
