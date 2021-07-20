@@ -13,16 +13,20 @@
 
           {% for item in page.items %}
           <div class="work-item">
+            {% if item.title == 'Dear My Diary' %}
+            <a href="http://github.com/noheunchong/dearmydiary">
             <img
-              src="{{ item.image.src | absolute_url }}"
-              alt="{{ item.image.alt }}"
+              src="/assets/img/work/dmd.png"
+              alt="dmd"
               class="work-bubble"
             />
+            </a>
             <span class="work-text">
               <strong>{{ item.title }}</strong>
               &mdash;
               {{ item.description }}
             </span>
+            {% endif %}
           </div>
           {% endfor %}
         </div>
