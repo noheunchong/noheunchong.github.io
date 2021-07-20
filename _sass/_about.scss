@@ -13,18 +13,18 @@
    padding:15px;
 }
 
-.skills .skill {
+.skill {
    margin-bottom: 30px;
 }
 
-.skills .skill .skill-title {
+.skill-title {
    color: #808080;
    margin-bottom: 10px;
    font-weight: 400;
    font-size: 14px;
 }
 
-.skills .skill .skill-bar {
+.skill-bar {
    width: 0;
    height: 6px;
    background: #f0f0f0;
@@ -34,7 +34,7 @@
 }
 
 
-.skills .skill .skill-bar span {
+.skill-bar span {
    float: left;
    width: 0%;
    background: #1D91F2;
@@ -45,7 +45,7 @@
    -ms-transition: 1s cubic-bezier(1, 0, .5, 1);
 }
 
-.skills .skill .skill-bar span b {
+.skill-bar span b {
    float: left;
    width: 100%;
    position: relative;
