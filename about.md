@@ -7,6 +7,10 @@ items:
     image:
       src: /assets/img/about/eclipse.png
       alt: eclipse
+ - title: Dreamweaver
+    image:
+      src: /assets/img/about/dw.png
+      alt: dw
 ---
 
 <br />
