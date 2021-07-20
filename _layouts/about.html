@@ -24,6 +24,7 @@
             <div class="skills php">PHP</div>
           </div>
         </div>
+          {% for item in page.items %}
           <div class="about-tool">
             <h3>| Programming Tools</h3>
           <img
@@ -31,6 +32,7 @@
               alt="{{ item.image.alt }}"
               class="tools"
           </div>
+            {% endfor %}
      </div>
   </div>
 </div>
