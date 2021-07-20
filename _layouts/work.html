@@ -13,11 +13,13 @@
 
           {% for item in page.items %}
           <div class="work-item">
+            <a herf="http://github.com/noheunchong/dearmydiay">
             <img
               src="{{ item.image.src | absolute_url }}"
               alt="{{ item.image.alt }}"
               class="work-bubble"
             />
+            </a>
             <span class="work-text">
               <strong>{{ item.title }}</strong>
               &mdash;
