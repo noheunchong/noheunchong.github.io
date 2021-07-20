@@ -1,11 +1,5 @@
-.blog-post-list {
-  .blog-post-date {
-    width: 6em;
-    color: #777;
-    display: block;
-    float: left;
-
-    @include media-query($on-mobile) {
+.about-bubble {
+   @include media-query($on-mobile) {
       display: block;
       float: none;
       color: #333;
@@ -14,7 +8,7 @@
     }
   }
 
-  .blog-post-title {
+  .about-title {
     font-size: 100%;
     letter-spacing: normal;
   }
