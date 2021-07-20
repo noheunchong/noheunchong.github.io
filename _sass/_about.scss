@@ -1,15 +1,12 @@
-.about-bubble {
-   @include media-query($on-mobile) {
-      display: block;
-      float: none;
-      color: #333;
-      font-size: 11px;
-      margin-top: 14px;
-    }
+.about-skill {
+  float: left;
+  padding-right: 20px;
+  width: 100px;
+  height: 100px;
   }
-
-  .about-title {
-    font-size: 100%;
-    letter-spacing: normal;
+.about-tool {
+  float: right;
+  padding-left: 20px;
+  width: 100px;
+  height: 100px;
   }
-}
