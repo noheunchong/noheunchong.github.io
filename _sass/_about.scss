@@ -1,25 +1,7 @@
 .h3 {
   padding-top:10px;
   }
-  
-.container {
-  width: 80%;
-  height: 80%;
-  background-color: #ddd;
-}
 
-.skills {
-  text-align: right;
-  text-size: 2px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  color: white;
-  
-    java {width: 93%; background-color: #808080;}
-    mysql {width: 90%; background-color: #808080;}
-    html {width: 88%; background-color: #808080;}
-    php {width: 80%; background-color: #808080;}
-}
   
 
 
@@ -29,6 +11,23 @@
   padding-right: 20px;
   width: 350px;
   height: 300px;
+    container {
+      width: 80%;
+      height: 80%;
+      background-color: #ddd;
+      }
+      skills {
+        text-align: right;
+        text-size: 2px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        color: white;
+  
+          java {width: 93%; background-color: #808080;}
+          mysql {width: 90%; background-color: #808080;}
+          html {width: 88%; background-color: #808080;}
+          php {width: 80%; background-color: #808080;}
+          }
   }
 .about-tool {
   float: right;
