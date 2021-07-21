@@ -51,7 +51,7 @@
     background-color: white;
     content: " ";
 }
-.progress-circle span {
+.progress-circle-span {
     position: absolute;
     line-height: 5em;
     width: 5em;
@@ -65,23 +65,11 @@
    width: 5em;
    height: 5em;
    position: absolute; 
-   clip: rect(0, 5em, 5em, 2.5em); 
+  clip: rect(auto,auto,auto,auto);
 }
-.progress-circle.over50 .left-half-clipper {
-   clip: rect(auto,auto,auto,auto);
-}
-.value-bar {
-   position: absolute; 
-   clip: rect(0, 2.5em, 5em, 0);
-   width: 5em;
-   height: 5em;
-   border-radius: 50%;
-   border: 0.45em solid #53777A; 
-   box-sizing: border-box;
-  
-}
-.progress-circle.over50 .first50-bar {
-   position: absolute; /*needed for clipping*/
+
+.first50-bar {
+   position: absolute;
    clip: rect(0, 5em, 5em, 2.5em);
    background-color: #53777A;
    border-radius: 50%;
@@ -90,9 +78,33 @@
 }
 .progress-circle:not(.over50) .first50-bar{ display: none; }
 
-.progress-circle.p77 .value-bar { transform: rotate(277deg); }
-.progress-circle.p99 .value-bar { transform: rotate(356deg); }
-.progress-circle.p100 .value-bar { transform: rotate(360deg); }
+.p77-value-bar { 
+  transform: rotate(277deg); 
+  position: absolute; 
+   clip: rect(0, 2.5em, 5em, 0);
+   width: 5em;
+   height: 5em;
+   border-radius: 50%;
+   border: 0.45em solid #53777A; 
+   box-sizing: border-box;}
+.p99-value-bar { 
+  transform: rotate(356deg); 
+  position: absolute; 
+   clip: rect(0, 2.5em, 5em, 0);
+   width: 5em;
+   height: 5em;
+   border-radius: 50%;
+   border: 0.45em solid #53777A; 
+   box-sizing: border-box;}
+.p100-value-bar { 
+  transform: rotate(360deg); 
+  position: absolute; 
+   clip: rect(0, 2.5em, 5em, 0);
+   width: 5em;
+   height: 5em;
+   border-radius: 50%;
+   border: 0.45em solid #53777A; 
+   box-sizing: border-box;}
 
 
 
