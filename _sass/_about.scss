@@ -100,9 +100,9 @@
 }
 .progress-circle:not(.over50) .first50-bar{ display: none; }
 
-.progress-circle.p10 .value-bar { transform: rotate(36deg); }
-.progress-circle.p33 .value-bar { transform: rotate(119deg); }
-.progress-circle.p66 .value-bar { transform: rotate(238deg); }
+.progress-circle.p90 .value-bar { transform: rotate(324deg); }
+.progress-circle.p80 .value-bar { transform: rotate(288deg); }
+.progress-circle.p75 .value-bar { transform: rotate(270deg); }
 
 .about-tool {
   float: left;
