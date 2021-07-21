@@ -34,109 +34,73 @@
 }
 
 
-.set-size {
-  font-size: 10em;
+.progress-circle {
+   font-size: 20px;
+   margin: 20px;
+   position: relative; 
+   padding: 0;
+   width: 5em;
+   height: 5em;
+   background-color: #F2E9E1; 
+   border-radius: 50%;
+   line-height: 5em;
 }
-.charts-container:after {
-  clear: both;
-  content: "";
-  display: table;
+
+.progress-circle:after{
+    border: none;
+    position: absolute;
+    top: 0.35em;
+    left: 0.35em;
+    text-align: center;
+    display: block;
+    border-radius: 50%;
+    width: 4.3em;
+    height: 4.3em;
+    background-color: white;
+    content: " ";
 }
-.pie-wrapper {
-  height: 100px;
-  width: 100px;;
-  float: left;
-  margin: 15px;
-  position: relative;
+.progress-circle span {
+    position: absolute;
+    line-height: 5em;
+    width: 5em;
+    text-align: center;
+    display: block;
+    color: #53777A;
+    z-index: 2;
 }
-.pie-wrapper:nth-child(3n+1) {
-  clear: both;
+.left-half-clipper { 
+   border-radius: 50%;
+   width: 5em;
+   height: 5em;
+   position: absolute; 
+   clip: rect(0, 5em, 5em, 2.5em); 
 }
-.pie-wrapper .pie {
-  height: 100%;
-  width: 100%;
-  clip: rect(0, 80px, 100px, 50px);
-  left: 0;
-  position: absolute;
-  top: 0;
+.progress-circle.over50 .left-half-clipper {
+   clip: rect(auto,auto,auto,auto);
 }
-.pie-wrapper .pie .half-circle {
-  height: 100%;
-  width: 100%;
-  border: 10px solid #3498db;
-  border-radius: 50%;
-  clip: rect(0, 50px, 100px, 0);
-  left: 0;
-  position: absolute;
-  top: 0;
+.value-bar {
+   position: absolute; 
+   clip: rect(0, 2.5em, 5em, 0);
+   width: 5em;
+   height: 5em;
+   border-radius: 50%;
+   border: 0.45em solid #53777A; 
+   box-sizing: border-box;
+  
 }
-.pie-wrapper .label {
-  background: #34495e;
-  border-radius: 50%;
-  bottom: 40px;
-  color: #ecf0f1;
-  cursor: default;
-  display: block;
-  font-size: 25px;
-  left: 40px;
-  line-height: 40px;
-  position: absolute;
-  right: 40px;
-  text-align: center;
-  top: 40px;
+.progress-circle.over50 .first50-bar {
+   position: absolute;
+   clip: rect(0, 5em, 5em, 2.5em);
+   background-color: #53777A;
+   border-radius: 50%;
+   width: 5em;
+   height: 5em;
 }
-.pie-wrapper .label .smaller {
-  color: #bdc3c7;
-  font-size: 15px;
-  padding-bottom: 20px;
-  vertical-align: super;
-}
-.pie-wrapper .shadow {
-  height: 100%;
-  width: 100%;
-  border: 10px solid #bdc3c7;
-  border-radius: 50%;
-}
-.pie-wrapper.style-2 .label {
-  background: none;
-  color: #7f8c8d;
-}
-.pie-wrapper.style-2 .label .smaller {
-  color: #bdc3c7;
-}
-.pie-wrapper.progress-30 .pie .right-side {
-  display: none;
-}
-.pie-wrapper.progress-30 .pie .half-circle {
-  border-color: #3498db;
-}
-.pie-wrapper.progress-30 .pie .left-side {
-  transform: rotate(108deg);
-}
-.pie-wrapper.progress-60 .pie {
-  clip: rect(auto, auto, auto, auto);
-}
-.pie-wrapper.progress-60 .pie .right-side {
-  transform: rotate(180deg);
-}
-.pie-wrapper.progress-60 .pie .half-circle {
-  border-color: #9b59b6;
-}
-.pie-wrapper.progress-60 .pie .left-side {
-  transform: rotate(216deg);
-}
-.pie-wrapper.progress-90 .pie {
-  clip: rect(auto, auto, auto, auto);
-}
-.pie-wrapper.progress-90 .pie .right-side {
-  transform: rotate(180deg);
-}
-.pie-wrapper.progress-90 .pie .half-circle {
-  border-color: #e67e22;
-}
-.pie-wrapper.progress-90 .pie .left-side {
-  transform: rotate(324deg);
-}
+.progress-circle:not(.over50) .first50-bar{ display: none; }
+
+.progress-circle.p10 .value-bar { transform: rotate(36deg); }
+.progress-circle.p33 .value-bar { transform: rotate(119deg); }
+.progress-circle.p66 .value-bar { transform: rotate(238deg); }
 .about-tool {
   float: left;
   width: 250px;
