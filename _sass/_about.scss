@@ -33,8 +33,8 @@
 }
 
 .indicator{
-  width:80px;
-  height:80px;
+  width:100px;
+  height:100px;
   background-color:white;
   text-align: center;
   position: relative;
@@ -43,9 +43,9 @@
 
 .indicator span {
     position: absolute;
-    line-height: 80px;
-    font-size:12px;
-    width: 80px;
+    line-height: 100px;
+    font-size:15px;
+    width: 100px;
     text-align: center;
     display: block;
     color: #53777A;
@@ -55,8 +55,8 @@
 .value-bar{
   background-color:#e67e22;
   position:absolute;
-  width:60px;
-  height:60px;
+  width:80px;
+  height:80px;
   border-radius:50%;
   clip: rect(0px 50px 80px 0px);
   transform: rotate(189deg);
@@ -65,25 +65,25 @@
 .left-half{
   background-color:gray;
   position:absolute;
-  width:60px;
-  height:60px;
+  width:80px;
+  height:80px;
   border-radius:50%;
-  clip: rect(0px 50px 80px 0px);
+  clip: rect(0px 40px 100px 0px);
   z-index:3;
 }
 .right-half{
   background-color:gray;
   position:absolute;
-  width:60px;
-  height:60px;
+  width:80px;
+  height:80px;
   border-radius:50%;
-  clip: rect(0px 50px 80px 50px);
+  clip: rect(0px 80px 100px 40px);
   z-index:3;
 }
 .centr{
   background-color: gray;
-  width:60px;
-  height:60px;
+  width:80px;
+  height:80px;
   border-radius:100%;
   margin: 10px 10px;
   position: absolute;
@@ -92,19 +92,19 @@
 .centr.over50 .left-half{
    /*Progress bar for the first 50%, filling the whole right half*/
    position: absolute; /*needed for clipping*/
-   clip: rect(0, 60px, 60px, 50px);
+   clip: rect(0, 0px, 80px, 40px);
    background-color: blue;
    border-radius: 50%;
-   width: 60px;
-   height: 60px;
+   width: 80px;
+   height: 80px;
 }
 .centrV{
   background-color: white;
-  width:40px;
+  width:70px;
   position: absolute;
-  height:40px;
+  height:70px;
   border-radius:50%;
-  margin: 10px 10px;
+  margin: 15px 15px;
   z-index:3;
 }
 .p10 .value-bar { transform: rotate(36deg); }
