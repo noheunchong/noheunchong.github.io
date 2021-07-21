@@ -43,8 +43,8 @@
   display: table;
 }
 .pie-wrapper {
-  height: 1em;
-  width: 1em;
+  height: 100px;
+  width: 100px;;
   float: left;
   margin: 15px;
   position: relative;
@@ -55,7 +55,7 @@
 .pie-wrapper .pie {
   height: 100%;
   width: 100%;
-  clip: rect(0, 1em, 1em, 0.5em);
+  clip: rect(0, 80px, 100px, 50px);
   left: 0;
   position: absolute;
   top: 0;
@@ -63,9 +63,9 @@
 .pie-wrapper .pie .half-circle {
   height: 100%;
   width: 100%;
-  border: 0.1em solid #3498db;
+  border: 10px solid #3498db;
   border-radius: 50%;
-  clip: rect(0, 0.5em, 1em, 0);
+  clip: rect(0, 50px, 100px, 0);
   left: 0;
   position: absolute;
   top: 0;
@@ -73,28 +73,28 @@
 .pie-wrapper .label {
   background: #34495e;
   border-radius: 50%;
-  bottom: 0.4em;
+  bottom: 40px;
   color: #ecf0f1;
   cursor: default;
   display: block;
-  font-size: 0.25em;
-  left: 0.4em;
-  line-height: 2.6em;
+  font-size: 25px;
+  left: 40px;
+  line-height: 40px;
   position: absolute;
-  right: 0.4em;
+  right: 40px;
   text-align: center;
-  top: 0.4em;
+  top: 40px;
 }
 .pie-wrapper .label .smaller {
   color: #bdc3c7;
-  font-size: .45em;
+  font-size: 15px;
   padding-bottom: 20px;
   vertical-align: super;
 }
 .pie-wrapper .shadow {
   height: 100%;
   width: 100%;
-  border: 0.1em solid #bdc3c7;
+  border: 10px solid #bdc3c7;
   border-radius: 50%;
 }
 .pie-wrapper.style-2 .label {
