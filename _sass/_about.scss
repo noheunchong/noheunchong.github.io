@@ -26,7 +26,7 @@
 .html {width: 85%; background-color: #808080; height: 12px;}
 .php {width: 80%; background-color: #808080; height: 12px;}
 
-.progress{
+.about-skills{
     width: 150px;
     height: 150px;
     line-height: 150px;
@@ -35,16 +35,7 @@
     box-shadow: none;
     position: relative;
 }
-.progress:after{
-    content: "";
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    border: 15px solid #f2f5f5;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
+
 .progress > span{
     width: 50%;
     height: 100%;
@@ -53,10 +44,31 @@
     top: 0;
     z-index: 1;
 }
-.progress .progress-left{
-    left: 0;
+
+.left-bar{
+    left: 100%;
+    border-top-right-radius: 80px;
+    border-bottom-right-radius: 80px;
+    border-left: 0;
+
 }
-.progress .progress-bar{
+.right-bar{
+    left: -100%;
+    border-top-left-radius: 80px;
+    border-bottom-left-radius: 80px;
+    border-right: 0;
+
+}
+progress-value{
+    width: 100%;
+    height: 100%;
+    font-size: 24px;
+    color: rgb(250, 245, 245);
+    text-align: center;
+    position: absolute;
+}
+.progress blue {
+    border-color: #26abfd;
     width: 100%;
     height: 100%;
     background: none;
@@ -65,41 +77,27 @@
     position: absolute;
     top: 0;
 }
-.progress .progress-left .progress-bar{
-    left: 100%;
-    border-top-right-radius: 80px;
-    border-bottom-right-radius: 80px;
-    border-left: 0;
 
-}
-.progress .progress-right{
-    right: 0;
-}
-.progress .progress-right .progress-bar{
-    left: -100%;
-    border-top-left-radius: 80px;
-    border-bottom-left-radius: 80px;
-    border-right: 0;
-
-}
-.progress .progress-value{
+.progress yellow {
+    border-color: #fdc426;
     width: 100%;
     height: 100%;
-    font-size: 24px;
-    color: rgb(250, 245, 245);
-    text-align: center;
+    background: none;
+    border-width: 15px;
+    border-style: solid;
     position: absolute;
-}
-.progress.blue .progress-bar{
-    border-color: #26abfd;
+    top: 0;
 }
 
-.progress.yellow .progress-bar{
-    border-color: #fdc426;
-}
-
-.progress.pink .progress-bar{
+.progress pink{
     border-color: #f83754;
+    width: 100%;
+    height: 100%;
+    background: none;
+    border-width: 15px;
+    border-style: solid;
+    position: absolute;
+    top: 0;
 }
 
 
