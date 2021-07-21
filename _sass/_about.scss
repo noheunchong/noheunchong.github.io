@@ -33,19 +33,19 @@
 }
 
 .indicator{
-  width:500px;
-  height:500px;
+  width:80px;
+  height:80px;
   background-color:white;
   text-align: center;
   position: relative;
   z-index:2;
 }
-/* Text inside the control */
+
 .indicator span {
     position: absolute;
-    line-height: 500px;
-    font-size:72px;
-    width: 500px;
+    line-height: 80px;
+    font-size:12px;
+    width: 80px;
     text-align: center;
     display: block;
     color: #53777A;
@@ -55,56 +55,56 @@
 .value-bar{
   background-color:blue;
   position:absolute;
-  width:400px;
-  height:400px;
+  width:60px;
+  height:60px;
   border-radius:50%;
-  clip: rect(0px 200px 500px 0px);
+  clip: rect(0px 50px 80px 0px);
   transform: rotate(189deg);
   z-index:3;
 }
 .left-half{
   background-color:gray;
   position:absolute;
-  width:400px;
-  height:400px;
+  width:60px;
+  height:60px;
   border-radius:50%;
-  clip: rect(0px 200px 500px 0px);
+  clip: rect(0px 50px 80px 0px);
   z-index:3;
 }
 .right-half{
   background-color:gray;
   position:absolute;
-  width:400px;
-  height:400px;
+  width:60px;
+  height:60px;
   border-radius:50%;
-  clip: rect(0px 400px 500px 200px);
+  clip: rect(0px 50px 80px 50px);
   z-index:3;
 }
 .centr{
   background-color: gray;
-  width:400px;
-  height:400px;
+  width:60px;
+  height:60px;
   border-radius:100%;
-  margin: 50px 50px;
+  margin: 10px 10px;
   position: absolute;
   z-index:2;
 }
 .centr.over50 .left-half{
    /*Progress bar for the first 50%, filling the whole right half*/
    position: absolute; /*needed for clipping*/
-   clip: rect(0, 400px, 400px, 200px);
+   clip: rect(0, 60px, 60px, 50px);
    background-color: blue;
    border-radius: 50%;
-   width: 400px;
-   height: 400px;
+   width: 60px;
+   height: 60px;
 }
 .centrV{
   background-color: white;
-  width:350px;
+  width:40px;
   position: absolute;
-  height:350px;
+  height:40px;
   border-radius:50%;
-  margin: 75px 75px;
+  margin: 10px 10px;
   z-index:3;
 }
 .p10 .value-bar { transform: rotate(36deg); }
