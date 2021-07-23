@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  {% assign page_is_article = false %}
+  {% if page.layout == "post" %}{% assign page_is_article = true %}{% endif %}
+
+  {% assign page_title = "" %}
+  {% if page.draft %}{% assign page_title = page_title | append: "[DRAFT] " %}{% endif %}
+  {% if page.title %}
+    {% assign page_title = page_title | append: site.title | append: " | " | append: page.title %}
+  {% else %}
+    {% assign page_title = site.title %}
+  {% endif %}
+
+  {% assign page_description = "" %}
+  {% if page.draft %}{% assign page_description = page_description | append: "[DRAFT] " %}{% endif %}
+  {% if page.blurb %}
+    {% assign page_description = page_description | append: page.blurb %}
+  {% else %}
+    {% assign page_description = site.description %}
+  {% endif %}
+
+  {% assign page_url = page.url | replace: "index.html","" | replace: ".html","" | prepend: site.baseurl | prepend: site.url %}
+
+  {% assign page_image = site.og_image | prepend: site.baseurl | prepend: site.url %}
+  {% if page.og_image %}
+    {% assign page_image = site.url + page.og_image %}
+  {% endif %}
+
+  {% for follow in site.footer.follow %}
+    {% if follow.name == 'Twitter' %}
+      {% assign twitter_username = follow.username %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+
+  <!-- Primary Meta Tags -->
+  <title>{{ page_title }}</title>
+  <meta name="title" content="{{ page_title }}"/>
+  <meta name="description" content="{{ page_description }}"/>
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:site_name" content="{{ page_title }}"/>
+  <meta property="og:type" content="{% if page_is_article %}article{% else %}website{% endif %}"/>
+  <meta property="og:url" content="{{ page_url }}"/>
+  <meta property="og:title" content="{{ page_title }}"/>
+  <meta property="og:description" content="{{ page_description }}"/>
+  <meta property="og:image" content="{{ page_image }}"/>
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image"/>
+  <meta property="twitter:url" content="{{ page_url }}"/>
+  <meta property="twitter:title" content="{{ page_title }}"/>
+  <meta property="twitter:description" content="{{ page_description }}"/>
+  <meta property="twitter:image" content="{{ page_image }}"/>
+  {% if twitter_username %}
+    <meta property="twitter:creator" content="{{ twitter_username }}"/>
+    <meta property="twitter:site" content="{{ twitter_username }}"/>
+  {% endif %}
+
+  <link rel="stylesheet" href="{{ "/assets/css/main.css" | absolute_url }}"/>
+  <link rel="canonical" href="{{ page_url }}"/>
+  <link rel="shortcut icon" href="{{ "/favicon.ico" | absolute_url }}" type="image/x-icon"/>
+
+  <!-- Google Analytics -->
+  <script>
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+    ga('create', "{{ site.google_analytics }}", "auto");
+    ga('send', "pageview");
+  </script>
+  <script async src="https://www.google-analytics.com/analytics.js"></script>
+  
+ <body>
+    <header class="site-header">
+  <div class="wrapper">
+    <a class="site-title" href="{{ "" | prepend: site.baseurl | prepend: site.url }}/">
+      <img src="{{ "/assets/img/title.png" | absolute_url }}" alt="{{ site.title }}" />
+    </a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon"></a>
+
+      <div class="menu">
+        {% for page in site.header.pages %}
+          {% if page.slug and page.slug != "" and page.slug != nil %}
+            {% assign page_link = page.slug %}
+          {% else %}
+            {% assign page_link = "/" | append: page.name | downcase %}
+          {% endif %}
+          {% assign page_link = page_link | absolute_url %}
+          <a class="page-link" href="{{ page_link }}">
+            {{ page.name }}
+          </a>
+        {% endfor %}
+      </div>
+    </nav>
+  </div>
+</header>
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="about">
+          <video src="/assets/dmd.mp4" width="600" height="400" controls auto loop></video>
+     </div>
+  </div>
+</div>
+    <footer class="site-footer">
+  <div class="wrapper">
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <h4>CONTACT</h4>
+
+        <div class="social-links">
+          {% for contact in site.footer.contact %}
+            <div class="social-link contact-links">
+
+              {% assign contact_icon_path = "/assets/img/icons/" | append: contact.name | downcase | append: ".png" | absolute_url %}
+              <img
+                src="{{ contact_icon_path }}"
+                alt="{{ contact.name | downcase }}"
+              />
+              <a href="{{ contact.link }}" id="{{ contact.name | downcase }}-link">
+                {% if contact.value and contact.value != "" and contact.value != nil %}
+                  {{ contact.value }}
+                {% else %}
+                  {{ contact.name }}
+                {% endif %}
+              </a>
+            </div>
+
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <h4>FOLLOW</h4>
+
+        <div class="social-links follow-links">
+          {% for follow in site.footer.follow %}
+            <div class="social-link">
+
+              {% assign follow_icon_path = "/assets/img/icons/" | append: follow.name | downcase | append: ".png" | absolute_url %}
+              <img
+                src="{{ follow_icon_path }}"
+                alt="{{ follow.name | downcase }}"
+              />
+              <a href="{{ follow.link }}">
+                {% if follow.value and follow.value != "" and follow.value != nil %}
+                  {{ follow.value }}
+                {% else %}
+                  {{ follow.name }}
+                {% endif %}
+              </a>
+            </div>
+
+          {% endfor %}
+        </div>
+      </div>
+
+      {% if site.footer.show_powered_by == true %}
+        <div class="footer-col footer-col-3 powered-by">
+          <p>
+            powered by <a href="https://github.com/eliottvincent/bay">Bay</a> | {{ 'now' | date: "%Y" }}
+          </p>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</footer>
+   {% for contact in site.footer.contact %}
+  {% if contact.name == 'WeChat' %}
+    {% assign wechat_username = contact.value %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
+{% if wechat_username %}
+  <div id="wechat-widget">
+    <p>
+      Find me on WeChat with the ID <strong>{{ wechat_username }}</strong>, or scan my QR code:
+    </p>
+
+    <img src="{{ "/assets/img/wechat-qr-code.png" | absolute_url }}" alt="QR code" id="qr-code" />
+  </div>
+{% endif %}
+
+    <script type="text/javascript" src="{{ "/assets/js/vendor/cash-4.1.5.min.js" | absolute_url }}"></script>
+<script type="text/javascript" src="{{ "/assets/js/site.js" | absolute_url }}"></script>
+  </body>
+</html>
