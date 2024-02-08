@@ -13,12 +13,14 @@
 
           {% for item in page.items %}
           <div class="work-item">
+            {% if items.title1 = '임상시험 관련 웹 개발 프로젝트'%}
             <span class="work-text">
               <strong>{{ items.title1 }}</strong>
               <strong>{{ items.period1 }}</strong>
               &mdash;
               {{ items.description1 }}
             </span>
+            {% end if %}
             <span class="work-text">
               <strong>{{ items.title2 }}</strong>
               <strong>{{ items.period2 }}</strong>
